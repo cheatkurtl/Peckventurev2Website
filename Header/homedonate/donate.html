@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spenden - Peckventure</title>
+    <link rel="stylesheet" href="../../style/style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div>
+            <a href="../homehome/index.html">
+                <span data-lang="de" style="display:none;">Startseite</span>
+                <span data-lang="en" style="display:none;">Home</span>
+            </a>
+            <a href="../about/about.html">
+                <span data-lang="de" style="display:none;">Über PeckCode Studios</span>
+                <span data-lang="en" style="display:none;">About PeckCode Studios</span>
+            </a>
+            <a href="../home/home.html">
+                <span data-lang="de" style="display:none;">Peckventure</span>
+                <span data-lang="en" style="display:none;">Peckventure</span>
+            </a>
+            <a href="../homecontact/contact.html">
+                <span data-lang="de" style="display:none;">Kontakt</span>
+                <span data-lang="en" style="display:none;">Contact</span>
+            </a>
+            <a href="../homedonate/donate.html">
+                <span data-lang="de" style="display:none;">Spenden</span>
+                <span data-lang="en" style="display:none;">Donate</span>
+            </a>
+            <a href="../apply/jobs.html" class="active">
+                <span data-lang="de" style="display:none;">Karriere</span>
+                <span data-lang="en" style="display:none;">Careers</span>
+            </a>
+     
+        </div>
+        <select id="language-selector" class="language-selector">
+            <option value="de" selected>Deutsch</option>
+            <option value="en">English</option>
+        </select>
+    </nav>
+
+<main>
+    <section class="title">
+        <span data-lang="de">Spenden</span>
+        <span data-lang="en" style="display:none;">Donate</span>
+    </section>
+    <div class="content-box donate-box">
+        <h2>
+            <span data-lang="de">Unterstütze Peckventure</span>
+            <span data-lang="en" style="display:none;">Support Peckventure</span>
+        </h2>
+        <p>
+            <span data-lang="de">Deine Spende hilft uns, Peckventure weiterzuentwickeln und neue spannende Features zu integrieren!</span>
+            <span data-lang="en" style="display:none;">Your donation helps us improve Peckventure and add exciting new features!</span>
+        </p>
+        <div class="donation-options">
+            <button class="donate-button" onclick="setAmount(5)">
+                <span data-lang="de">5€</span>
+                <span data-lang="en" style="display:none;">€5</span>
+            </button>
+            <button class="donate-button" onclick="setAmount(10)">
+                <span data-lang="de">10€</span>
+                <span data-lang="en" style="display:none;">€10</span>
+            </button>
+            <button class="donate-button" onclick="setAmount(20)">
+                <span data-lang="de">20€</span>
+                <span data-lang="en" style="display:none;">€20</span>
+            </button>
+            <button class="donate-button" onclick="setAmount(50)">
+                <span data-lang="de">50€</span>
+                <span data-lang="en" style="display:none;">€50</span>
+            </button>
+        </div>
+        <form action="process_donation.php" method="POST" class="donation-form">
+            <div class="form-group">
+                <label for="customAmount">
+                    <span data-lang="de">Eigener Betrag (€)</span>
+                    <span data-lang="en" style="display:none;">Custom Amount (€)</span>
+                </label>
+                <input type="number" id="customAmount" name="customAmount" min="1" placeholder="Dein Betrag" required>
+            </div>
+            <button type="submit" class="submit-button">
+                <span data-lang="de">Jetzt Spenden</span>
+                <span data-lang="en" style="display:none;">Donate Now</span>
+            </button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <p>
+        <a href="../../footer/hometerms/terms.html">
+            <span data-lang="de">Nutzungsbedingungen</span>
+            <span data-lang="en" style="display:none;">Terms of Use</span>
+        </a>
+        <a href="../../footer/homeprivacy/privacy.html">
+            <span data-lang="de">Datenschutz</span>
+            <span data-lang="en" style="display:none;">Privacy Policy</span>
+        </a>
+        <a href="../../footer/homeimpressum/impressum.html">
+            <span data-lang="de">Impressum</span>
+            <span data-lang="en" style="display:none;">Legal Notice</span>
+        </a>
+        <a href="../../footer/homecookies/cookies.html">
+            <span data-lang="de">Cookies</span>
+            <span data-lang="en" style="display:none;">Cookies</span>
+        </a>
+    </p>
+    <p>© 2024 Peckventure</p>
+</footer>
+
+<script src="../../Script/language_switcher.js"></script>
+<script>
+    function setAmount(amount) {
+        document.getElementById("customAmount").value = amount;
+    }
+</script>
+</body>
+</html>

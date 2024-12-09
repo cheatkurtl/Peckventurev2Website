@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Peckventure</title>
+    <link rel="stylesheet" href="../../style/style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div>
+            <a href="../home/home.html">
+                <span data-lang="de" style="display:none;">Startseite</span>
+                <span data-lang="en" style="display:none;">Home</span>
+            </a>
+            <a href="../contact/contact.html">
+                <span data-lang="de" style="display:none;">Kontakt</span>
+                <span data-lang="en" style="display:none;">Contact</span>
+            </a>
+            <a href="../donate/donate.html">
+                <span data-lang="de" style="display:none;">Spenden</span>
+                <span data-lang="en" style="display:none;">Donate</span>
+            </a>
+            <a href="../faq/faq.html">FAQ</a>
+            <a href="../history/history.html">
+                <span data-lang="de" style="display:none;">Geschichte</span>
+                <span data-lang="en" style="display:none;">History</span>
+            </a>
+            <a href="../newsletter/newsletter.html">Newsletter</a>
+            <a href="../homehome/index.html">
+                <span data-lang="de" style="display:none;">PeckCode Studios</span>
+                <span data-lang="en" style="display:none;">PeckCode Studios</span>
+            </a>
+            <a href="https://discord.gg/w3bAGPu4dG" target="_blank">
+                <span data-lang="de" style="display:none;">Discord beitreten</span>
+                <span data-lang="en" style="display:none;">Join Discord</span>
+            </a>      
+        </div>
+        <select id="language-selector" class="language-selector">
+            <option value="de" selected>Deutsch</option>
+            <option value="en">English</option>
+        </select>
+    </nav>
+    
+
+<main>
+    <section class="title">
+        <span data-lang="de">Kontakt</span>
+        <span data-lang="en" style="display:none;">Contact</span>
+    </section>
+    <div class="content-box contact-box">
+        <h2>
+            <span data-lang="de">Kontaktiere uns</span>
+            <span data-lang="en" style="display:none;">Contact Us</span>
+        </h2>
+        <p>
+            <span data-lang="de">Wir freuen uns über deine Nachricht. Bitte fülle das untenstehende Formular aus, und wir melden uns bei dir!</span>
+            <span data-lang="en" style="display:none;">We look forward to your message. Please fill out the form below, and we will get back to you!</span>
+        </p>
+        <form action="send_email.php" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">
+                    <span data-lang="de">Name</span>
+                    <span data-lang="en" style="display:none;">Name</span>
+                </label>
+                <input type="text" id="name" name="name" placeholder="Dein Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">
+                    <span data-lang="de">E-Mail</span>
+                    <span data-lang="en" style="display:none;">Email</span>
+                </label>
+                <input type="email" id="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+            </div>
+            <div class="form-group">
+                <label for="message">
+                    <span data-lang="de">Nachricht</span>
+                    <span data-lang="en" style="display:none;">Message</span>
+                </label>
+                <textarea id="message" name="message" rows="5" placeholder="Deine Nachricht..." required></textarea>
+            </div>
+            <button type="submit" class="contact-button">
+                <span data-lang="de">Nachricht senden</span>
+                <span data-lang="en" style="display:none;">Send Message</span>
+            </button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-links">
+        <a href="../../footer/terms/terms.html">
+            <span data-lang="de">Nutzungsbedingungen</span>
+            <span data-lang="en" style="display:none;">Terms of Use</span>
+        </a>
+        <a href="../../footer/privacy/privacy.html">
+            <span data-lang="de">Datenschutz</span>
+            <span data-lang="en" style="display:none;">Privacy Policy</span>
+        </a>
+        <a href="../../footer/impressum/impressum.html">
+            <span data-lang="de">Impressum</span>
+            <span data-lang="en" style="display:none;">Imprint</span>
+        </a>
+        <a href="../../footer/cookies/cookies.html">
+            <span data-lang="de">Cookies</span>
+            <span data-lang="en" style="display:none;">Cookies</span>
+        </a>
+    </div>
+    <p>© 2024 Peckventure</p>
+</footer>
+
+<script src="../../Script/language_switcher.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter - Peckventure</title>
+    <link rel="stylesheet" href="../../style/style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div>
+            <a href="../home/home.html">
+                <span data-lang="de" style="display:none;">Startseite</span>
+                <span data-lang="en" style="display:none;">Home</span>
+            </a>
+            <a href="../contact/contact.html">
+                <span data-lang="de" style="display:none;">Kontakt</span>
+                <span data-lang="en" style="display:none;">Contact</span>
+            </a>
+            <a href="../donate/donate.html">
+                <span data-lang="de" style="display:none;">Spenden</span>
+                <span data-lang="en" style="display:none;">Donate</span>
+            </a>
+            <a href="../faq/faq.html">FAQ</a>
+            <a href="../history/history.html">
+                <span data-lang="de" style="display:none;">Geschichte</span>
+                <span data-lang="en" style="display:none;">History</span>
+            </a>
+            <a href="../newsletter/newsletter.html">Newsletter</a>
+            <a href="../homehome/index.html">
+                <span data-lang="de" style="display:none;">PeckCode Studios</span>
+                <span data-lang="en" style="display:none;">PeckCode Studios</span>
+            </a>
+            <a href="https://discord.gg/w3bAGPu4dG" target="_blank">
+                <span data-lang="de" style="display:none;">Discord beitreten</span>
+                <span data-lang="en" style="display:none;">Join Discord</span>
+            </a>      
+        </div>
+        <select id="language-selector" class="language-selector">
+            <option value="de" selected>Deutsch</option>
+            <option value="en">English</option>
+        </select>
+    </nav>
+    
+
+<main>
+    <section class="title">
+        <span data-lang="de">Newsletter</span>
+        <span data-lang="en" style="display:none;">Newsletter</span>
+    </section>
+    <div class="content-box newsletter-box">
+        <h2>
+            <span data-lang="de">Abonniere unseren Newsletter</span>
+            <span data-lang="en" style="display:none;">Subscribe to our Newsletter</span>
+        </h2>
+        <p>
+            <span data-lang="de">Erhalte regelmäßig Neuigkeiten und Updates rund um Peckventure direkt in deinen Posteingang.</span>
+            <span data-lang="en" style="display:none;">Receive regular news and updates about Peckventure directly in your inbox.</span>
+        </p>
+        <form action="newsletter_signup.php" method="POST" class="newsletter-form">
+            <div class="form-group">
+                <label for="email">
+                    <span data-lang="de">E-Mail-Adresse:</span>
+                    <span data-lang="en" style="display:none;">Email Address:</span>
+                </label>
+                <input type="email" id="email" name="email" required 
+                       placeholder="Deine E-Mail-Adresse" 
+                       data-placeholder-de="Deine E-Mail-Adresse" 
+                       data-placeholder-en="Your email address">
+            </div>
+            <button type="submit" class="submit-button">
+                <span data-lang="de">Anmelden</span>
+                <span data-lang="en" style="display:none;">Subscribe</span>
+            </button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-links">
+        <a href="../../footer/terms/terms.html">
+            <span data-lang="de">Nutzungsbedingungen</span>
+            <span data-lang="en" style="display:none;">Terms of Use</span>
+        </a>
+        <a href="../../footer/privacy/privacy.html">
+            <span data-lang="de">Datenschutz</span>
+            <span data-lang="en" style="display:none;">Privacy Policy</span>
+        </a>
+        <a href="../../footer/impressum/impressum.html">
+            <span data-lang="de">Impressum</span>
+            <span data-lang="en" style="display:none;">Imprint</span>
+        </a>
+        <a href="../../footer/cookies/cookies.html">
+            <span data-lang="de">Cookies</span>
+            <span data-lang="en" style="display:none;">Cookies</span>
+        </a>
+    </div>
+    <p>© 2024 Peckventure</p>
+</footer>
+
+<script src="../../Script/language_switcher.js"></script>
+<script>
+    // Language switcher to update placeholders
+    document.getElementById('language-selector').addEventListener('change', function() {
+        const selectedLang = this.value;
+        document.querySelectorAll('input').forEach(input => {
+            const placeholder = input.getAttribute(`data-placeholder-${selectedLang}`);
+            if (placeholder) input.placeholder = placeholder;
+        });
+    });
+</script>
+</body>
+</html>
